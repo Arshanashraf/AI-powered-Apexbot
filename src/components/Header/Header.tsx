@@ -26,7 +26,7 @@ function Header() {
       <Container>
         <nav className="flex">
           <div className="mr-4">
-            <Link to={"/"}><Logo  /></Link>
+            <Link to={"/"}><Logo  width="100%"/></Link>
           </div>
           <ul className="flex ml-auto">
             {navitems.map((item) => item.active ? (
