@@ -4,9 +4,7 @@ import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 import authService from "../services/appwrite/auth";
 import { login } from "../store/authSlice";
-import Logo from "./Logo";
-import Input from "./Input";
-import Button from "./Button";
+import {Input,Logo,Button} from "./index";
 
 interface SignupFormData{
     name: string;
@@ -55,16 +53,14 @@ function Signup() {
         className="font-medium text-primary transition-all duration-200 hover:underline">Sign In</Link>
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
-        <form onClick={handleSubmit(create)}>
+        <form onSubmit={handleSubmit(create)}>
             <div className="space-y-5">
                 <Input 
                 label="Full Name"
                 placeholder="Enter your full name"
-                {
-                    ...register("name",{
+                {...register("name",{
                         required: true
-                    })
-                }
+                })}
                 />
                 {errors && <p className="text-red-600 mt-8 text-center">{errors.name?.message}</p>}
                 <Input 
@@ -89,7 +85,7 @@ function Signup() {
                     })
                 }
                 />
-                <Button type="submit" classname="w-full">Create Account</Button>
+                {/* <Button type="submit" classname="w-full">Create Account</Button> */}
             </div>
         </form>
       </div>

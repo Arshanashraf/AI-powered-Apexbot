@@ -4,9 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { login as authLogin } from "../store/authSlice";
 import authService from "../services/appwrite/auth";
 import { useState } from "react";
-import Logo from "./Logo";
-import Input from "./Input";
-import Button from "./Button";
+import {Input,Logo,Button} from "./index";
 
 interface LoginFormData {
   email: string;
@@ -84,7 +82,7 @@ function Login() {
             />
             {errors.password && <p className="text-red-600 mt-1 text-center">{errors.password.message}</p>}
 
-            <Button type="submit" className="w-full">Sign In</Button>
+            <Button type="submit" classname="w-full">Sign In</Button>
           </div>
         </form>
       </div>

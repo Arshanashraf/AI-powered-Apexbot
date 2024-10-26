@@ -13,7 +13,7 @@ interface ButtonProps{
 export default function Button({
     children,
     type= 'button',
-    bgColor = 'bg-blue-400',
+    bgColor = 'bg-green-400',
     textColor = 'text-white',
     classname = '',
     ...props
