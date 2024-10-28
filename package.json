@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@huggingface/inference": "^2.8.1",
     "@reduxjs/toolkit": "^2.3.0",
     "appwrite": "^16.0.2",
     "axios": "^1.7.7",

@@ -1,27 +1,29 @@
-import axios from "axios";
-
-const apiUrl = String(import.meta.env.VITE_AI_API_URL);
-const apiKey = String(import.meta.env.VITE_AI_API_KEY);
-
-export const getBotResponse= async (userMessage: string) : Promise<string> => {
+export const getBotResponse = async (message:string) => {
+    console.log("Sending message:", message); // Log the message being sent
     try {
-        const response = await axios.post(
-            apiUrl,
-            {
-                model : "gpt-4",
-                messages: [{role: "user", content: userMessage}],
-                stream: true
+        const response = await fetch('/api/models/facebook/blenderbot-400M-distill', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${import.meta.env.VITE_HUGGINGFACE_API_KEY}`,
+                'Content-Type': 'application/json',
             },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${apiKey}`
-                }
-            }
-        );
-        return response.data.choices[0].message.content;
+            body: JSON.stringify({ inputs: message }),
+        });
+
+        if (!response.ok) {
+            const errorMessage = await response.text();
+            console.error('Response error:', errorMessage);
+            throw new Error(`HTTP error! status: ${response.status}, message: ${errorMessage}`);
+        }
+
+        const data = await response.json();
+        console.log("Received response:", data);
+        
+        // Extract the generated text
+        return data[0]?.generated_text || "Sorry, I didn't get that."; // Fallback message
+
     } catch (error) {
-        console.log("Error fetching bot response", error);
+        console.error('Error fetching bot response:', error);
         throw error;
     }
-}
+};
