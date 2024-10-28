@@ -65,6 +65,7 @@ function Signup() {
                 {errors && <p className="text-red-600 mt-8 text-center">{errors.name?.message}</p>}
                 <Input 
                 label="Email"
+                type="email"
                 placeholder="Enter your email address"
                 {
                     ...register("email", {
@@ -78,6 +79,7 @@ function Signup() {
                 {errors && <p className="text-red-600 mt-8 text-center">{errors.email?.message}</p>}
                 <Input 
                 label="Password"
+                type="password"
                 placeholder="enter your password"
                 {
                     ...register("password",{
@@ -85,7 +87,7 @@ function Signup() {
                     })
                 }
                 />
-                {/* <Button type="submit" classname="w-full">Create Account</Button> */}
+                <Button type="submit" classname="w-full">Create Account</Button>
             </div>
         </form>
       </div>

@@ -7,6 +7,10 @@ import Button from "./Button"
 import Input from "./Input"
 import Login from "./Login"
 import Signup from "./Signup"
+import ChatInput from "./MessageBox/ChatInput"
+import ChatWindow from "./MessageBox/ChatWindow"
+import UserMessage from "./MessageBox/UserMessage"
+import BotResponse from "./MessageBox/BotResponse"
 export{
     Header,
     Container,
@@ -16,5 +20,9 @@ export{
     Button,
     Input,
     Login,
-    Signup
+    Signup,
+    ChatInput,
+    ChatWindow,
+    UserMessage,
+    BotResponse
 }
