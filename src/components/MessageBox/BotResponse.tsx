@@ -3,7 +3,7 @@ interface BotResponseProps{
 }
 
 const BotResponse = ({message}:BotResponseProps) => {
-  return <div>{message}</div>
+  return <div className="text-start  mx-24 text-lg font-bold">{message}</div>
 }
 
 export default BotResponse
