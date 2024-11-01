@@ -1,10 +1,11 @@
-interface LogoProps{
-  width: string
-}
-function Logo({width= "70%"}:LogoProps) {
+import ApexBotLogo from "../assets/images/ApexbotLogo.png"
+
+
+function Logo() {
   return (
-    <div style={{width}}>
-      Logo
+    <div  className="flex ">
+      <img className="w-16 mt-1 rounded-full" src={ApexBotLogo} alt="" />
+
     </div>
   )
 }

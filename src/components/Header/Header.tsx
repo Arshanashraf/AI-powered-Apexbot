@@ -6,11 +6,6 @@ function Header() {
   const navigate = useNavigate()
   const navitems = [
     {
-      name: "Home",
-      slug: '/home',
-      active: true
-    },
-    {
       name: "Login",
       slug: "/login",
       active: !authStatus
@@ -22,17 +17,17 @@ function Header() {
     }
   ]
   return (
-    <header className="py-3 fixed w-full shadow bg-gray-500">
+    <header className="py-3 fixed w-full shadow bg--50">
       <Container>
         <nav className="flex">
-          <div className="mr-4">
-            <Link to={"/"}><Logo  width="100%"/></Link>
+          <div className="mr-4 w-fit  ">
+            <Link to={"/"} className="flex"><Logo /> <div className="pl-2 pt-4 text-2xl font-extrabold text-purple-800">APEXBOT</div> </Link>
           </div>
           <ul className="flex ml-auto">
             {navitems.map((item) => item.active ? (
               <li key={item.name}>
                 <button onClick={() => navigate(item.slug)} 
-                  className="inline-block px-6 py-2 duration-200 text-xl text-white font-bold hover:bg-blue-100 rounded-full">{item.name}</button>
+                  className="inline-block px-6 py-4 duration-200 text-xl text-white font-bold hover:blur-sm hover:shadow-blue-500 hover:shadow-2xl rounded-full">{item.name}</button>
               </li>
             ): null)}{
               authStatus && (
