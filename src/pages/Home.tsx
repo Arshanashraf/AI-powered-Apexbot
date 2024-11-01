@@ -65,7 +65,7 @@ const Home = () => {
     return (
         <div className="flex flex-col h-screen">
             <Container>
-                <div className="flex flex-col mx-40 overflow-y-auto h-screen bg-white">
+                <div className="flex flex-col mx-40 overflow-y-auto h-screen bg-none shadow-2xl shadow-blue-700 bg-blue-900 opacity-30">
                     <div className="flex-1 mt-20 px-4">
                         <ChatWindow messages={messages} loading={loading} />
                     </div>
