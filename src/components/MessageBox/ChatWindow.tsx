@@ -13,7 +13,7 @@ const ChatWindow = ({ messages }: ChatWindowProps) => {
     return (
         <div>
             {messages.length === 0 ? (
-                <p className="text-white">No messages yet.</p> // Show a message if there are no messages
+                <p className="text-white ">No messages yet.</p> // Show a message if there are no messages
             ) : (
                 messages.map((msg, index) => {
                     if (msg.role === 'user') {

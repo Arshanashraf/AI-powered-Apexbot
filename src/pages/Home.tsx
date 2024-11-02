@@ -65,13 +65,13 @@ const Home = () => {
     return (
         <div className="flex flex-col h-screen">
             <Container>
-                <div className="flex flex-col mx-40 overflow-y-auto h-screen bg-none shadow-2xl shadow-blue-700 bg-blue-900 opacity-30">
-                    <div className="flex-1 mt-20 px-4">
+                <div className="flex flex-col mx-40 overflow-y-auto h-screen bg-none shadow-2xl shadow-blue-700 ">
+                    <div className="flex-1 mt-20 px-4 ">
                         <ChatWindow messages={messages} loading={loading} />
                     </div>
                 </div>
             </Container>
-            <div className="fixed bottom-0 w-full border-t p-4 bg-black">
+            <div className="fixed bottom-0 w-full border-t-2 border-t-blue-900 p-4 bg-none ">
                 <ChatInput onSend={handleSendMessage} />
             </div>
         </div>
