@@ -13,13 +13,13 @@ interface ButtonProps{
 export default function Button({
     children,
     type= 'button',
-    bgColor = 'bg-green-400',
+    bgColor = 'bg-purple-700',
     textColor = 'text-white',
     classname = '',
     ...props
 }:ButtonProps) {
   return (
-    <button type={type} className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${classname}`} {...props}>{children}</button>
+    <button type={type} className={`px-4 py-2 rounded-lg font-bold hover:bg-purple-400 hover:shadow-lg hover:shadow-purple-400 ${bgColor} ${textColor} ${classname}`} {...props}>{children}</button>
   )
 }
 
