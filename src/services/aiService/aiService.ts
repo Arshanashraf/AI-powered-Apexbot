@@ -19,7 +19,7 @@ export const getBotResponse = async (message:string) => {
         const data = await response.json();
         console.log("Received response:", data);
         
-        // Extract the generated text
+        // Extract the generated texts
         return data[0]?.generated_text || "Sorry, I didn't get that."; // Fallback message
 
     } catch (error) {
