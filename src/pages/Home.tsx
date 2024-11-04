@@ -68,13 +68,15 @@ const Home = () => {
         <div className="flex flex-col h-screen">
             <Container>
                 <div className="flex flex-col mx-40 overflow-y-auto  h-screen bg-none shadow-2xl shadow-blue-700 2xs:mx-0 xs:mx-4 sm:mx-24 md:mx-24">
-                    <div className="flex-1 mt-20 2xs:px-0 xs:px-0 px-4 mb-24">
+                    <div className="flex-1 mt-20 2xs:px-0 xs:px-0 px-4 mb-28">
                         <ChatWindow messages={messages} loading={loading} />
                     </div>
                 </div>
             </Container>
             <div className="fixed bottom-0 w-full border-t-2 border-t-blue-900 p-4 bg-none ">
                 <ChatInput onSend={handleSendMessage} />
+                
+            <div className='mb-0 mt-2'><h1 className='text-white'>Created with <i className="fa-solid fa-heart text-red-600"></i> by  <a href="" target='_blank' className='underline hover:text-gray-200'>ArshanDev</a> </h1></div>
             </div>
         </div>
     );
