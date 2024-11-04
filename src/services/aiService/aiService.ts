@@ -1,7 +1,7 @@
 export const getBotResponse = async (message:string) => {
     console.log("Sending message:", message); // Log the message being sent
     try {
-        const response = await fetch('/api/models/facebook/blenderbot-400M-distill', {
+        const response = await fetch('https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_HUGGINGFACE_API_KEY}`,
@@ -19,7 +19,7 @@ export const getBotResponse = async (message:string) => {
         const data = await response.json();
         console.log("Received response:", data);
         
-        // Extract the generated text
+        // Extract the generated texts
         return data[0]?.generated_text || "Sorry, I didn't get that."; // Fallback message
 
     } catch (error) {
