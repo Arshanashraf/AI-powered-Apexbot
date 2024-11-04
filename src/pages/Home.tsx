@@ -49,14 +49,16 @@ const Home = () => {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
-                    <div className="flex items-center justify-center py-36 w-full">
+                    <div className="flex items-center justify-center py-20 w-full">
                         <div className="text-center">
                             <img src={Img} alt="" className='w-48  animate-bounce mx-auto'/>
                             <h1 className="text-2xl animate-pulse font-bold  text-white">
                                 Login or Signup to Start Chatting
                             </h1>
+                            <div className='pt-20'><h1 className='text-white'>Created with <i className="fa-solid fa-heart text-red-600"></i> by  <a href="" target='_blank' className='underline hover:text-gray-200'>ArshanDev</a> </h1></div>
                             {/* Add login/signup buttons here */}
                         </div>
+                        
                     </div>
                 </Container>
             </div>
