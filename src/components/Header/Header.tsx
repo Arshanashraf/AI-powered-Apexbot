@@ -33,7 +33,7 @@ function Header() {
           </div>
           <Navbar.Toggle aria-controls="navbarScroll" className="navbar-dark" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav className="ml-auto flex">
+            <Nav className="ml-auto flex ">
               {navitems.map(
                 (item) =>
                   item.active && (
