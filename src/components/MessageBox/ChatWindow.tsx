@@ -11,7 +11,7 @@ const ChatWindow = ({ messages }: ChatWindowProps) => {
     console.log("Messages in ChatWindow:", messages); // Log the messages to see what's being passed
 
     return (
-        <div>
+        <div >
             {messages.length === 0 ? (
                 <p className="text-white ">No messages yet.</p> // Show a message if there are no messages
             ) : (

@@ -27,7 +27,7 @@ const ChatInput = ({onSend}:ChatInputProps) => {
        onKeyPress= {handleKeyPress}
        onChange={(e) => setMessage(e.target.value)}
        placeholder="Type your message..." 
-       className="px-3 py-2 rounded-s-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-gray-200 w-96"/>
+       className="px-3 py-2 rounded-s-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-gray-200 w-96 2xs:w-60 xs:w-72" />
 
        <Button classname="rounded-s-none py-2.5" onClick={handleSend}><i className="fa-solid fa-paper-plane"></i></Button>
     </div>
