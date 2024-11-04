@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Container } from '../components';
+import Img from '../assets/images/robo.png'
 import { ChatMessage, formatMessage } from '../utils/chatUtils';
 import { getBotResponse } from '../services/aiService/aiService';
 import ChatWindow from '../components/MessageBox/ChatWindow';
@@ -48,9 +49,10 @@ const Home = () => {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
-                    <div className="flex flex-wrap">
-                        <div className="p-64 animate-pulse  w-full">
-                            <h1 className="text-2xl  font-bold  text-white">
+                    <div className="flex items-center justify-center py-36 w-full">
+                        <div className="text-center">
+                            <img src={Img} alt="" className='w-48  animate-bounce mx-auto'/>
+                            <h1 className="text-2xl animate-pulse font-bold  text-white">
                                 Login or Signup to Start Chatting
                             </h1>
                             {/* Add login/signup buttons here */}
@@ -65,8 +67,8 @@ const Home = () => {
     return (
         <div className="flex flex-col h-screen">
             <Container>
-                <div className="flex flex-col mx-40 overflow-y-auto h-screen bg-none shadow-2xl shadow-blue-700 ">
-                    <div className="flex-1 mt-20 px-4 ">
+                <div className="flex flex-col mx-40 overflow-y-auto  h-screen bg-none shadow-2xl shadow-blue-700 2xs:mx-0 xs:mx-4 sm:mx-24 md:mx-24">
+                    <div className="flex-1 mt-20 2xs:px-0 xs:px-0 px-4 mb-24">
                         <ChatWindow messages={messages} loading={loading} />
                     </div>
                 </div>
